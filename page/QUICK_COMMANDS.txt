@@ -1,0 +1,39 @@
+========================================
+QUICK COMMANDS - Copy & Paste
+========================================
+
+STEP 1: Install Dependencies
+-----------------------------
+composer install
+npm install
+
+STEP 2: Setup Environment
+--------------------------
+php artisan key:generate
+
+STEP 3: Setup Database
+-----------------------
+New-Item -Path database\database.sqlite -ItemType File -Force
+php artisan migrate
+php artisan db:seed
+php artisan storage:link
+
+STEP 4: Build Assets
+--------------------
+npm run build
+
+STEP 5: Start Server
+--------------------
+php artisan serve
+
+========================================
+ALL IN ONE (After prerequisites)
+========================================
+composer install && npm install && php artisan key:generate && New-Item -Path database\database.sqlite -ItemType File -Force && php artisan migrate && php artisan db:seed && php artisan storage:link && npm run build && php artisan serve
+
+========================================
+AFTER FIRST SETUP (Just start server)
+========================================
+php artisan serve
+
+========================================

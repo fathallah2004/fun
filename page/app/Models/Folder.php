@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+
+class Folder extends Model
+{
+    protected $fillable = [
+        'title',
+        'description',
+        'slug',
+        'layout_type',
+        'order',
+    ];
+
+    public function media(): HasMany
+    {
+        return $this->hasMany(Media::class)->orderBy('order');
+    }
+}
